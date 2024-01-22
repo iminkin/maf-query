@@ -15,9 +15,16 @@ int main(int argc, char* argv[])
 {
 	std::string buffer;
 	std::vector<std::string> query;
+	/*
 	std::string inFile("D:/Projects/JHU2/maf-query/data/subset.maf");
 	std::string reference("Homo_sapiens");
 	std::ifstream queryFile("D:/Projects/JHU2/maf-query/data/species.txt");
+	*/
+
+	std::string inFile(argv[1]);
+	std::string reference(argv[2]);
+	std::ifstream queryFile(argv[3]);
+
 	while (std::getline(queryFile, buffer))
 	{
 		query.push_back(buffer);
